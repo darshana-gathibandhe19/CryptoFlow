@@ -1,0 +1,17 @@
+# Ignore Airflow Logs (These are massive)
+logs/
+*.log
+
+# Ignore Python Cache
+__pycache__/
+*.pyc
+
+# Ignore Virtual Environments (if any)
+venv/
+.env
+
+# Ignore Passwords
+standalone_admin_password.txt
+
+# Ignore OS junk
+.DS_Store
