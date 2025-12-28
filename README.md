@@ -70,6 +70,8 @@ Login using the credentials found in the Docker logs.
 Trigger the crypto_pipeline_v1 DAG.
 
 📸 Screenshots
+c:\Users\Dell\OneDrive\Pictures\Screenshots\airflow_success.jpg c:\Users\Dell\OneDrive\Pictures\Screenshots\snowflake_data.jpg
+
 🚧 Challenges Overfaced
 Docker Permissions: Solved root-user installation blocks by using python -m pip to bypass wrapper script restrictions.
 
