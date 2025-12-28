@@ -4,9 +4,9 @@ from datetime import datetime
 
 # --- CONFIGURATION (EDIT THIS!) ---
 SNOWFLAKE_CONFIG = {
-    "user": "darshanagathibandhe",        # e.g. "DARSHANA"
-    "password": "DarshanaGathi19@#",    # Your login password
-    "account": "WAPGEBU-MU96328",   # e.g. "xy12345.us-east-1"
+    "user": "DARSHANA",        # e.g. "DARSHANA"
+    "password": "REPLACE_WITH_YOUR_PASSWORD",    # Your login password
+    "account": "REPLACE_WITH_YOUR_ACCOUNT",   # e.g. "xy12345.us-east-1"
     "warehouse": "COMPUTE_WH",
     "database": "CRYPTO_DB",
     "schema": "PUBLIC"
