@@ -34,18 +34,17 @@ CryptoFlow/
 ├── crypto_loader.py        # Standalone Python script for local testing
 ├── requirements.txt        # Python dependencies
 └── README.md               # Project documentation
+```
 
-⚙️ Setup & Installation
-1. Prerequisites
-Docker Desktop installed and running.
+## ⚙️ Setup & Installation
 
-A Snowflake Account (Trial or Standard).
+### 1. Prerequisites
+* **Docker Desktop** installed and running.
+* A **Snowflake Account** (Trial or Standard).
 
-2. Snowflake Setup
+### 2. Snowflake Setup
 Run the following SQL in your Snowflake worksheet to prepare the database:
-
-SQL
-
+```sql
 CREATE DATABASE CRYPTO_DB;
 CREATE TABLE BITCOIN_PRICES (
     SYMBOL VARCHAR(10),
@@ -53,29 +52,24 @@ CREATE TABLE BITCOIN_PRICES (
     MARKET_CAP FLOAT,
     TIMESTAMP TIMESTAMP_NTZ
 );
-
-3. Running the Pipeline (Docker)
+```
+### 3. Running the Pipeline (Docker)
 This project uses the Airflow Standalone container.
 
 Windows PowerShell:
-
-PowerShell
-
+```powershell
 docker run -d -p 8080:8080 -v "${PWD}/dags":/opt/airflow/dags --name airflow-crypto apache/airflow:2.7.1-python3.10 standalone
-Install Dependencies inside Docker:
-
-Bash
-
+```
+**Install Dependencies inside Docker:**
+```bash
 docker exec -u 0 -it airflow-crypto bash
 python -m pip install snowflake-connector-python requests pandas
-4. Access the Dashboard
-Go to: http://localhost:8080
+```
+### 4. Access the Dashboard
+* Go to: http://localhost:8080
+* Login using the credentials found in the Docker logs.
+* Trigger the crypto_pipeline_v1 DAG.
 
-Login using the credentials found in the Docker logs.
-
-Trigger the crypto_pipeline_v1 DAG.
-
-🚧 Challenges Overfaced
-Docker Permissions: Solved root-user installation blocks by using python -m pip to bypass wrapper script restrictions.
-
-Environment Conflicts: Managed Python versioning (3.14 vs 3.10) using Docker containers to ensure library compatibility.
+## 🚧 Challenges Overfaced
+* Docker Permissions: Solved root-user installation blocks by using python -m pip to bypass wrapper script restrictions.
+* Environment Conflicts: Managed Python versioning (3.14 vs 3.10) using Docker containers to ensure library compatibility.
