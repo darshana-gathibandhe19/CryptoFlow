@@ -20,6 +20,12 @@ The system orchestrates data workflows using **Apache Airflow** running in **Doc
 * **Language:** Python 3.10
 * **Libraries:** `snowflake-connector-python`, `requests`, `pandas`
 
+## 📸 Screenshots
+<p align="center">
+  <img src="airflow_success.png" width="600" alt="Airflow Success">
+  <img src="snowflake_data.png" width="600" alt="Snowflake Data">
+</p>
+
 ## 📂 Project Structure
 ```text
 CryptoFlow/
@@ -68,11 +74,6 @@ Go to: http://localhost:8080
 Login using the credentials found in the Docker logs.
 
 Trigger the crypto_pipeline_v1 DAG.
-
-📸 Screenshots
-<img src="airflow_success.jpg" width="800">
-<br>
-<img src="snowflake_data.jpg" width="800">
 
 🚧 Challenges Overfaced
 Docker Permissions: Solved root-user installation blocks by using python -m pip to bypass wrapper script restrictions.
